@@ -34,6 +34,12 @@ dependencies {
     def daggerVersion = "2.11"
     compile "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //Moxy
+    def moxyVersion = "1.5.2"
+    implementation "com.arello-mobile:moxy:$moxyVersion"
+    implementation "com.arello-mobile:moxy-app-compat:$moxyVersion"
+    kapt "com.arello-mobile:moxy-compiler:$moxyVersion"
 }
 repositories {
     mavenCentral()

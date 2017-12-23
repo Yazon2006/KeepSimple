@@ -10,10 +10,15 @@ class App : Application() {
         appComponent = DaggerAppComponent.builder()
                 .appModule(AppModule(this))
                 .build()
+        screenComponent = DaggerScreenComponent.builder()
+                .appComponent(appComponent)
+                .build()
     }
 
     companion object {
         lateinit var appComponent: AppComponent
+            private set
+        lateinit var screenComponent: ScreenComponent
             private set
     }
 
