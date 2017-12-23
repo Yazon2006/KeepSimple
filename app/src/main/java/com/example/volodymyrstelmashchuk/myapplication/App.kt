@@ -1,21 +1,26 @@
 package com.example.volodymyrstelmashchuk.myapplication
 
 import android.app.Application
-import android.content.Context
+import com.example.volodymyrstelmashchuk.myapplication.injection.*
 
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appContext = applicationContext
+        appComponent = DaggerAppComponent.builder()
+                .appModule(AppModule(this))
+                .build()
+
+        screenComponent = DaggerScreenComponent.builder()
+                .appComponent(appComponent)
+                .build()
     }
 
     companion object {
-        private lateinit var appContext: Context
-
-        fun getApplicationContext(): Context {
-            return appContext
-        }
+        lateinit var appComponent: AppComponent
+            private set
+        lateinit var screenComponent: ScreenComponent
+            private set
     }
 
 }

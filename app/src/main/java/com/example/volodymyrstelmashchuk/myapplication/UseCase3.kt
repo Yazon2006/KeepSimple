@@ -1,11 +1,7 @@
 package com.example.volodymyrstelmashchuk.myapplication
 
-class UseCase3(private val serverDataSource: ServerDataSource) {
+import javax.inject.Inject
 
-    companion object {
-        fun make() : UseCase3 {
-            return UseCase3(ServerDataSource.make())
-        }
-    }
+class UseCase3 @Inject constructor(private val serverDataSource: ServerDataSource) {
 
 }

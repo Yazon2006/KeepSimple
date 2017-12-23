@@ -1,13 +1,8 @@
 package com.example.volodymyrstelmashchuk.myapplication
 
 import android.content.Context
+import javax.inject.Inject
 
-class DataBaseDataSource(private val content : Context) {
-
-    companion object {
-        fun make() : DataBaseDataSource {
-            return DataBaseDataSource(App.getApplicationContext())
-        }
-    }
+class DataBaseDataSource @Inject constructor (private val content : Context) {
 
 }

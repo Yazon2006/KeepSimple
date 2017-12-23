@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private val mainPresenter = MainPresenter.make()
+    val mainPresenter = App.screenComponent.provideMainPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

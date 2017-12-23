@@ -1,13 +1,8 @@
 package com.example.volodymyrstelmashchuk.myapplication
 
 import android.content.Context
+import javax.inject.Inject
 
-class CacheDataSource(private val content : Context) {
-
-    companion object {
-        fun make() : CacheDataSource {
-            return CacheDataSource(App.getApplicationContext())
-        }
-    }
+class CacheDataSource @Inject constructor(private val content : Context) {
 
 }
