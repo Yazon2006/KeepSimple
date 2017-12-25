@@ -1,10 +1,11 @@
-package com.example.volodymyrstelmashchuk.myapplication.view
+package com.example.app.view.main.presenter
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.example.volodymyrstelmashchuk.myapplication.interactor.FirstInteractor
-import com.example.volodymyrstelmashchuk.myapplication.interactor.SecondInteractor
-import com.example.volodymyrstelmashchuk.myapplication.interactor.ThirdInteractor
+import com.example.app.interactor.FirstInteractor
+import com.example.app.interactor.SecondInteractor
+import com.example.app.interactor.ThirdInteractor
+import com.example.app.view.main.MainView
 import javax.inject.Inject
 
 @InjectViewState

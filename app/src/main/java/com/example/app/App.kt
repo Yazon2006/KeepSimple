@@ -1,7 +1,7 @@
-package com.example.volodymyrstelmashchuk.myapplication
+package com.example.app
 
 import android.app.Application
-import com.example.volodymyrstelmashchuk.myapplication.injection.*
+import com.example.app.injection.*
 
 class App : Application() {
 

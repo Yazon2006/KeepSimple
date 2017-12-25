@@ -1,4 +1,4 @@
-package com.example.volodymyrstelmashchuk.myapplication.injection
+package com.example.app.injection
 
 import android.content.Context
 import dagger.Module

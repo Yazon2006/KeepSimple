@@ -1,8 +1,8 @@
-package com.example.volodymyrstelmashchuk.myapplication.interactor
+package com.example.app.interactor
 
-import com.example.volodymyrstelmashchuk.myapplication.data.CacheDataSource
-import com.example.volodymyrstelmashchuk.myapplication.data.DataBaseDataSource
-import com.example.volodymyrstelmashchuk.myapplication.data.ServerDataSource
+import com.example.app.data.CacheDataSource
+import com.example.app.data.DataBaseDataSource
+import com.example.app.data.ServerDataSource
 import javax.inject.Inject
 
 class SecondInteractor @Inject constructor(private val serverDataSource: ServerDataSource,

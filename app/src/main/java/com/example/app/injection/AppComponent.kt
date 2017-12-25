@@ -1,7 +1,7 @@
-package com.example.volodymyrstelmashchuk.myapplication.injection
+package com.example.app.injection
 
 import android.content.Context
-import com.example.volodymyrstelmashchuk.myapplication.view.MainPresenter
+import com.example.app.view.main.presenter.MainPresenter
 import dagger.Component
 import javax.inject.Singleton
 

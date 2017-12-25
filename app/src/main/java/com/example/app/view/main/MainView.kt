@@ -1,4 +1,4 @@
-package com.example.volodymyrstelmashchuk.myapplication.view
+package com.example.app.view.main
 
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy

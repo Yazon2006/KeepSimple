@@ -1,4 +1,4 @@
-package com.example.volodymyrstelmashchuk.myapplication.data
+package com.example.app.data
 
 import android.content.Context
 import javax.inject.Inject
