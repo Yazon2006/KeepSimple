@@ -13,10 +13,11 @@ class MainActivity : MvpAppCompatActivity(), MainView {
     lateinit var mainPresenter: MainPresenter
 
     @ProvidePresenter
-    fun providePresenter() = App.screenComponent.provideMainPresenter()
+    fun providePresenter() = App.appComponent.provideMainPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
 }
