@@ -1,12 +1,10 @@
 package com.example.app.interactor
 
-import com.example.app.data.CacheDataSource
-import com.example.app.data.DataBaseDataSource
-import com.example.app.data.ServerDataSource
+import com.example.app.data.AnotherOneRepository
+import com.example.app.data.SomeRepository
 import javax.inject.Inject
 
-class SecondInteractor @Inject constructor(private val serverDataSource: ServerDataSource,
-                                           private val cacheDataSource: CacheDataSource,
-                                           private val dataSource: DataBaseDataSource) {
+class SecondInteractor @Inject constructor(private val anotherOneRepository: AnotherOneRepository,
+                                           private val someRepository: SomeRepository) {
 
 }

@@ -1,14 +1,22 @@
 package com.example.app.injection
 
-import android.content.Context
-import com.example.app.view.main.presenter.MainPresenter
+import com.example.app.App
+import dagger.BindsInstance
 import dagger.Component
+import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class])
+@Component(modules = [AndroidSupportInjectionModule::class, ActivityModule::class,
+    FragmentModule::class, AppModule::class])
 interface AppComponent {
-    fun provideContext(): Context
+    @Component.Builder
+    interface Builder {
+        @BindsInstance
+        fun application(application: App): Builder
 
-    fun provideMainPresenter() : MainPresenter
+        fun build(): AppComponent
+    }
+
+    fun inject(app: App)
 }

@@ -1,17 +1,16 @@
 package com.example.app.injection
 
 import android.content.Context
+import com.example.app.App
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppModule(private val context: Context) {
+class AppModule {
 
     @Provides
     @Singleton
-    fun provideContext(): Context {
-        return context
-    }
+    fun provideContext(application: App): Context = application.applicationContext
 
 }
