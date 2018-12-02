@@ -1,4 +1,4 @@
-package com.example.app.view.main
+package com.example.app.view.activity
 
 import com.arellomobile.mvp.InjectViewState
 import com.example.app.interactor.SecondInteractor
@@ -10,5 +10,10 @@ import javax.inject.Inject
 class MainPresenter @Inject constructor(
         private val secondInteractor: SecondInteractor,
         private val thirdInteractor: ThirdInteractor) : BasePresenter<MainView>() {
+
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        viewState.showImportantFragment()
+    }
 
 }
