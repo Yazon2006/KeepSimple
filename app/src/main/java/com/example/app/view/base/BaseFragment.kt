@@ -10,13 +10,12 @@ import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
 abstract class BaseFragment : MvpAppCompatFragment(), HasSupportFragmentInjector {
-    
+
     @Inject
-    lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
-    
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> =
-          fragmentDispatchingAndroidInjector
-    
+    lateinit var childFragmentInjector: DispatchingAndroidInjector<Fragment>
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> = childFragmentInjector
+
     override fun onAttach(context: Context?) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)

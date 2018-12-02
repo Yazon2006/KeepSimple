@@ -10,6 +10,4 @@ import javax.inject.Inject
 class ImportantPresenter @Inject constructor(
         private val firstInteractor: FirstInteractor,
         private val secondInteractor: SecondInteractor
-) : BasePresenter<ImportantView>() {
-
-}
+) : BasePresenter<ImportantView>()

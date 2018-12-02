@@ -1,7 +1,7 @@
 package com.example.app.injection
 
 import com.example.app.view.fragment.ImportantFragment
-import com.example.app.view.main.MainActivity
+import com.example.app.view.activity.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -9,7 +9,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class AppBindingModule {
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity
-    
+
     @ContributesAndroidInjector
     abstract fun bindImportantFragment(): ImportantFragment
 }

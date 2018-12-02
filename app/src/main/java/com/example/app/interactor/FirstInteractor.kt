@@ -6,6 +6,4 @@ import javax.inject.Inject
 
 class FirstInteractor @Inject constructor(
         private val someRepository: SomeRepository,
-        private val anotherOneRepository: AnotherOneRepository) {
-
-}
+        private val anotherOneRepository: AnotherOneRepository)
