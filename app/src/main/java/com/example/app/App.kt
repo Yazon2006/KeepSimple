@@ -1,30 +1,16 @@
 package com.example.app
 
-import android.app.Activity
-import android.app.Application
-import com.example.app.injection.*
+import com.example.app.injection.DaggerAppComponent
 import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import javax.inject.Inject
+import dagger.android.DaggerApplication
 
-// DaggerApplication can be used
-class App : Application(), HasActivityInjector {
+class App : DaggerApplication() {
 
-    @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
-    override fun onCreate() {
-        super.onCreate()
-        DaggerAppComponent
+    override fun applicationInjector(): AndroidInjector<DaggerApplication> {
+        return DaggerAppComponent
                 .builder()
                 .application(this)
                 .build()
-                .inject(this)
-    }
-
-    override fun activityInjector(): AndroidInjector<Activity> {
-        return dispatchingAndroidInjector
     }
 
 }
